@@ -3,12 +3,12 @@
 Este proyecto es un portafolio profesional desarrollado exclusivamente con **HTML5** y **CSS3**, sin el uso de Javascript. El objetivo es demostrar el dominio de técnicas avanzadas de diseño web, animaciones y diseño responsive.
 
 ## Información del Estudiante
-* **Nombre:** [TU NOMBRE AQUÍ]
-* **Apellidos:** [TUS APELLIDOS AQUÍ]
+* **Nombre:** Carlos
+* **Apellidos:** Clavero Sánchez
 * **Finalidad:** Proyecto evaluativo para el Tema 4 de la asignatura Diseño de Interfaces Web (DIW).
 
 ## Despliegue
-* **URL de Despliegue:** [TU ENLACE DE VERCEL/NETLIFY AQUÍ]
+* **URL de Despliegue:** [Portfolio](...)
 
 ## Descripción de los Apartados
 
