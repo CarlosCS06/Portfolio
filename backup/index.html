@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Desarrollo Creativo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Checkbox para el Toggle de Modo Oscuro (Sin JS) -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" hidden>
+
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">CP<span>.</span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <label for="theme-toggle" class="theme-toggle-label">
+                <!-- Icono Luna (Modo Oscuro) -->
+                <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Icono Sol (Modo Claro) -->
+                <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container flex">
+                <div class="hero-content">
+                    <h2 class="animate-up">Creatividad <br><span>Digital</span></h2>
+                    <p class="animate-up" style="animation-delay: 0.2s;">Diseño y desarrollo de experiencias web
+                        excepcionales.</p>
+                    <a href="#proyectos" class="btn animate-up" style="animation-delay: 0.4s;">Ver Proyectos</a>
+                </div>
+                <div class="hero-visual">
+                    <!-- Elemento 3D con CSS -->
+                    <div class="cube-container">
+                        <div class="cube">
+                            <div class="face front">HTML</div>
+                            <div class="face back">CSS</div>
+                            <div class="face right">WEB</div>
+                            <div class="face left">APP</div>
+                            <div class="face top">DEV</div>
+                            <div class="face bottom">ART</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Imagen de fondo WebP -->
+            <img src="images/sample.webp" alt="Hero Background" class="hero-bg">
+        </section>
+
+        <section id="sobre-mi" class="about">
+            <div class="container grid">
+                <div class="about-img">
+                    <!-- Imagen PNG con transparencia -->
+                    <img src="images/profile.png" alt="Perfil" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <h2 class="reveal">Sobre Mí</h2>
+                    <p class="reveal">Hola, soy un apasionado del desarrollo web enfocado en crear interfaces intuitivas
+                        y modernas. Utilizo las últimas tecnologías CSS para lograr animaciones fluidas y diseños
+                        adaptables.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <h2 class="section-title">Mis Proyectos</h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <!-- Imagen AVIF -->
+                        <picture>
+                            <source srcset="images/sample.avif" type="image/avif">
+                            <img src="images/project.png" alt="Proyecto 1">
+                        </picture>
+                        <div class="card-content">
+                            <h3>Dashboard Futuro</h3>
+                            <p>Interfaz de gestión con efectos de cristal.</p>
+                        </div>
+                    </article>
+                    <!-- Otros proyectos con diferentes tamaños de imagen según pantalla -->
+                    <article class="project-card">
+                        <img src="images/project.png" srcset="images/project.png 800w, images/project.png 400w"
+                            sizes="(max-width: 600px) 400px, 800px" alt="Proyecto 2">
+                        <div class="card-content">
+                            <h3>Tienda Online</h3>
+                            <p>E-commerce responsive de alto rendimiento.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="skills">
+            <div class="container">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="skills-flex">
+                    <div class="skill-item">
+                        <svg class="icon-skill" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                        <span>Estructura HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <svg class="icon-skill" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 19l7-7 3 3-10 10L2 15l3-3 7 7zM12 5l7 7-3 3-4-4-4 4-3-3 7-7z"></path>
+                        </svg>
+                        <span>CSS3 Avanzado</span>
+                    </div>
+                    <div class="skill-item">
+                        <svg class="icon-skill" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span>Diseño Responsive</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container container-small">
+                <h2 class="section-title">Contáctame</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="¿En qué puedo ayudarte?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Carlos Pérez. Creado para DIW Tema 4.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
