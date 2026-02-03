@@ -42,3 +42,4 @@ Un formulario de contacto centrado y estilizado con CSS moderno, cuidando la exp
 * **Animaciones Avanzadas:** Uso de `animation-timeline: view()` para revelado basado en scroll y `@view-transition` para una navegación fluida.
 * **Diseño Responsivo:** Adaptado para dispositivos desde móviles hasta pantallas de alta resolución (TV).
 * **Formatos de Imagen:** Uso eficiente de PNG, WebP y AVIF.
+# Portfolio
