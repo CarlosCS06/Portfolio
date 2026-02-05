@@ -1,6 +1,6 @@
 /* ==========================================================
    PORTAFOLIO - CARLOS CLAVERO SÁNCHEZ
-   Estilos: Variables, Temas y Animaciones (Final)
+   Estilos: Variables, Temas y Animaciones
    ========================================================== */
 
 /* Configuración de Transiciones de Vista */
@@ -10,43 +10,43 @@
 
 :root {
     /* Paleta de Colores - Premium Junior Dev Theme */
-    --primary: #6366f1;
+    --primario: #6366f1;
     /* Indigo */
-    --primary-dark: #4f46e5;
-    --accent: #0ea5e9;
+    --primario-oscuro: #4f46e5;
+    --acento: #0ea5e9;
     /* Sky Blue */
-    --accent-glow: rgba(14, 165, 233, 0.4);
+    --acento-brillo: rgba(14, 165, 233, 0.4);
 
     /* Modo Claro (Default) */
-    --bg: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --border: #e2e8f0;
-    --glass: rgba(255, 255, 255, 0.7);
-    --nav-bg: rgba(248, 250, 252, 0.8);
-    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --fondo: #f8fafc;
+    --tarjeta-fondo: #ffffff;
+    --texto-principal: #0f172a;
+    --texto-atenuado: #64748b;
+    --borde: #e2e8f0;
+    --cristal: rgba(255, 255, 255, 0.7);
+    --nav-fondo: rgba(248, 250, 252, 0.8);
+    --sombra: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 
     /* Tipografías */
-    --font-head: 'Montserrat', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --fuente-cabecera: 'Montserrat', sans-serif;
+    --fuente-cuerpo: 'Inter', sans-serif;
 
-    --nav-height: 80px;
-    --container: 1100px;
-    --radius: 16px;
-    --transition: cubic-bezier(0.4, 0, 0.2, 1);
+    --nav-altura: 80px;
+    --contenedor: 1100px;
+    --radio: 16px;
+    --transicion: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Modo Oscuro */
 #theme-toggle:checked~* {
-    --bg: #030712;
-    --card-bg: #111827;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --border: #1f2937;
-    --glass: rgba(17, 24, 39, 0.7);
-    --nav-bg: rgba(3, 7, 18, 0.8);
-    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    --fondo: #1a1a1a;
+    --tarjeta-fondo: #2d2d2d;
+    --texto-principal: #f8fafc;
+    --texto-atenuado: #a3a3a3;
+    --borde: #404040;
+    --cristal: rgba(26, 26, 26, 0.7);
+    --nav-fondo: rgba(26, 26, 26, 0.8);
+    --sombra: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 /* Reset Básico */
@@ -56,21 +56,31 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--texto-principal);
+    transition: color 0.5s var(--transicion);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--text-main);
-    font-family: var(--font-body);
+    background-color: var(--fondo);
+    color: var(--texto-principal);
+    font-family: var(--fuente-cuerpo);
     line-height: 1.6;
     overflow-x: hidden;
-    transition: background-color 0.5s var(--transition), color 0.5s var(--transition);
+    transition: background-color 0.5s var(--transicion), color 0.5s var(--transicion);
 }
 
 .container {
-    max-width: var(--container);
+    max-width: var(--contenedor);
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -84,7 +94,7 @@ body {
    HEADER & NAVBAR
    ========================================================== */
 .navbar {
-    height: var(--nav-height);
+    height: var(--nav-altura);
     display: flex;
     align-items: center;
     position: fixed;
@@ -92,11 +102,11 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: var(--nav-bg);
+    background: var(--nav-fondo);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    transition: background-color 0.4s var(--transition);
+    border-bottom: 1px solid var(--borde);
+    transition: background-color 0.4s var(--transicion);
 }
 
 .navbar .container {
@@ -108,15 +118,15 @@ body {
 
 .logo {
     font-size: 1.5rem;
-    font-family: var(--font-head);
+    font-family: var(--fuente-cabecera);
     font-weight: 800;
-    color: var(--primary);
+    color: var(--primario);
     text-decoration: none;
     letter-spacing: -1px;
 }
 
 .logo span {
-    color: var(--accent);
+    color: var(--acento);
     animation: colorear 8s infinite;
     display: inline-block;
 }
@@ -129,14 +139,14 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: var(--texto-atenuado);
     font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.3s var(--transition);
+    transition: color 0.3s var(--transicion);
 }
 
 .nav-links a:hover {
-    color: var(--primary);
+    color: var(--primario);
 }
 
 .theme-toggle-label {
@@ -147,14 +157,14 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background: var(--border);
-    color: var(--text-main);
-    transition: all 0.3s var(--transition);
+    background: var(--borde);
+    color: var(--texto-principal);
+    transition: all 0.3s var(--transicion);
 }
 
 .theme-toggle-label:hover {
     transform: translateY(-2px);
-    background: var(--primary);
+    background: var(--primario);
     color: white;
 }
 
@@ -198,15 +208,22 @@ section {
 
 .hero h2 {
     font-size: clamp(3rem, 8vw, 5rem);
-    font-family: var(--font-head);
+    font-family: var(--fuente-cabecera);
     line-height: 1.1;
     margin-bottom: 24px;
     font-weight: 800;
 }
 
+.hero-top-text {
+    color: var(--texto-atenuado);
+    display: inline-block;
+    transition: color 0.5s var(--transicion);
+
+}
+
 .hero h2 span {
     display: block;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primario), var(--acento));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -214,7 +231,7 @@ section {
 
 .hero p {
     font-size: 1.25rem;
-    color: var(--text-muted);
+    color: var(--texto-atenuado);
     max-width: 600px;
 }
 
@@ -227,7 +244,7 @@ section {
 .avatar-css {
     width: 280px;
     height: 280px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: linear-gradient(135deg, var(--primario), var(--acento));
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -235,9 +252,9 @@ section {
     font-size: 6rem;
     font-weight: 800;
     color: white;
-    box-shadow: 0 20px 40px var(--accent-glow);
+    box-shadow: 0 20px 40px var(--acento-resplandor);
     margin: 0 auto;
-    font-family: var(--font-head);
+    font-family: var(--fuente-cabecera);
     position: relative;
     overflow: hidden;
 }
@@ -267,7 +284,7 @@ section {
 .about-text h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    font-family: var(--font-head);
+    font-family: var(--fuente-cabecera);
 }
 
 /* Proyectos */
@@ -278,17 +295,17 @@ section {
 }
 
 .project-card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
+    background: var(--tarjeta-fondo);
+    border-radius: var(--radio);
     overflow: hidden;
-    border: 1px solid var(--border);
-    transition: all 0.4s var(--transition);
-    box-shadow: var(--shadow);
+    border: 1px solid var(--borde);
+    transition: all 0.4s var(--transicion);
+    box-shadow: var(--sombra);
 }
 
 .project-card:hover {
     transform: translateY(-12px);
-    border-color: var(--primary);
+    border-color: var(--primario);
     box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
 }
 
@@ -296,7 +313,7 @@ section {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    transition: transform 0.6s var(--transition);
+    transition: transform 0.6s var(--transicion);
 }
 
 .project-card:hover img {
@@ -310,11 +327,11 @@ section {
 .project-info h3 {
     font-size: 1.25rem;
     margin-bottom: 8px;
-    font-family: var(--font-head);
+    font-family: var(--fuente-cabecera);
 }
 
 .project-info p {
-    color: var(--text-muted);
+    color: var(--texto-atenuado);
     font-size: 0.95rem;
 }
 
@@ -322,18 +339,19 @@ section {
 .contact-form {
     max-width: 550px;
     margin: 0 auto;
-    background: var(--card-bg);
+    background: var(--tarjeta-fondo);
     padding: 48px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    border: 1px solid var(--borde);
 }
 
 .contact-form h2 {
-    font-family: var(--font-head);
+    font-family: var(--fuente-cabecera);
     margin-bottom: 32px;
     text-align: center;
     font-size: 2rem;
+    color: var(--texto-principal);
 }
 
 .form-group {
@@ -345,35 +363,34 @@ section {
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--texto-atenuado);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 14px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--borde);
     border-radius: 12px;
-    background: var(--bg);
-    color: var(--text-main);
-    font-family: var(--font-body);
-    transition: all 0.3s var(--transition);
+    background: var(--fondo);
+    color: var(--texto-principal);
+    font-family: var(--fuente-cuerpo);
+    transition: all 0.3s var(--transicion);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary);
+    border-color: var(--primario);
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
     width: 100%;
-    /* Asegura que el ancho se mantenga o cambie según se prefiera */
 }
 
 /* Transición específica para el ancho como en el README */
 .form-group input {
     width: 95%;
     /* Un poco menos que el 100% inicial para notar el cambio */
-    transition: width 0.35s ease-in-out, border-color 0.3s var(--transition), box-shadow 0.3s var(--transition);
+    transition: width 0.35s ease-in-out, border-color 0.3s var(--transicion), box-shadow 0.3s var(--transicion);
 }
 
 .form-group input:focus {
@@ -383,18 +400,18 @@ section {
 .btn {
     width: 100%;
     padding: 14px 28px;
-    background: var(--primary);
+    background: var(--primario);
     color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     font-weight: 600;
     font-size: 1rem;
-    transition: all 0.3s var(--transition);
+    transition: all 0.3s var(--transicion);
 }
 
 .btn:hover {
-    background: var(--primary-dark);
+    background: var(--primario-oscuro);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
 }
@@ -412,36 +429,30 @@ section {
     position: relative;
     display: inline-block;
     cursor: default;
+    transition: all 0.4s var(--transicion);
 }
 
-.animated-text::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    color: var(--primary);
-    -webkit-text-stroke: 1px var(--primary);
-    border-right: 2px solid var(--primary);
-    overflow: hidden;
-    transition: width 0.5s var(--transition);
-    white-space: nowrap;
-}
-
-.animated-text:hover::after {
-    width: 100%;
-    filter: drop-shadow(0 0 10px var(--accent-glow));
+.animated-text:hover {
+    color: #ff0000;
+    -webkit-text-fill-color: #ff0000;
+    background: none;
+    transform: scale(1.05) translateY(-2px);
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
 /* 2. Fade Up General */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    animation: fade-up 1.2s var(--transition) forwards;
+    animation: fade-up 1.2s var(--transicion) forwards;
 }
 
 @keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -473,7 +484,7 @@ section {
 .hero-grid-bg {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-image: radial-gradient(var(--borde) 1px, transparent 1px);
     background-size: 40px 40px;
     mask-image: radial-gradient(ellipse at center, black, transparent 80%);
     opacity: 0.4;
@@ -500,7 +511,7 @@ section {
 /* Animación de colorear extraída del README */
 @keyframes colorear {
     0% {
-        color: var(--primary);
+        color: var(--primario);
     }
 
     30% {
@@ -532,4 +543,20 @@ section {
     .nav-links {
         display: none;
     }
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+.site-footer {
+    border-top: 1px solid var(--borde);
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--fondo);
+    transition: background-color 0.5s var(--transicion), border-color 0.5s var(--transicion);
+}
+
+.site-footer p {
+    color: var(--texto-atenuado);
+    transition: color 0.5s var(--transicion);
 }
