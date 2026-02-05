@@ -4,22 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Fase 1</title>
+    <title>Carlos Clavero Sánchez | Portafolio DIW</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Mi Portafolio</h1>
+    <!-- Checkbox para el Toggle de Modo Oscuro (Sin JS) -->
+    <input type="checkbox" id="theme-toggle" hidden>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">PROYECTO DIW<span>.</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <label for="theme-toggle" class="theme-toggle-label">
+                <!-- Icono Luna -->
+                <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Icono Sol -->
+                <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                </svg>
+            </label>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h2>Bienvenido</h2>
-            <p>Esta es la fase inicial de mi proyecto de Desarrollo de Interfaces Web.</p>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-grid-bg"></div>
+            <div class="container">
+                <h2 class="reveal">
+                    Desarrollador <br>
+                    <span class="animated-text" data-text="Desarrollador">Fullstack Junior</span>
+                </h2>
+                <p class="reveal" style="animation-delay: 0.2s;">
+                    Carlos Clavero Sánchez — Desarrollador Fullstack Junior en formación. Me gusta crear experiencias
+                    digitales modernas, escalables y con un diseño llamativo.
+                </p>
+                <div style="margin-top: 40px;" class="reveal" style="animation-delay: 0.4s;">
+                    <a href="#proyectos" class="btn" style="width: auto;">Ver Mis Proyectos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section id="sobre-mi" class="about reveal-on-scroll">
+            <div class="container grid">
+                <div class="about-img float-3d">
+                    <div class="avatar-css">CS</div>
+                </div>
+                <div class="about-text">
+                    <h2 class="reveal">Mi Trayectoria</h2>
+                    <p>Como desarrollador apasionado por la tecnología, me enfoco en el aprendizaje continuo y en la
+                        implementación de soluciones eficientes. Mi objetivo es construir aplicaciones que no solo
+                        funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="proyectos" class="projects reveal-on-scroll">
+            <div class="container">
+                <h2 style="margin-bottom: 48px; font-size: 2.5rem; font-family: var(--font-head);">Proyectos Destacados
+                </h2>
+                <div class="project-grid">
+                    <!-- Proyecto 1: Proyecto Blessed -->
+                    <article class="project-card">
+                        <a href="https://proyecto-web-blessed-i7qu.vercel.app/" target="_blank"
+                            style="text-decoration: none; color: inherit; display: block;">
+                            <img src="images/blessed.jpg" alt="Proyecto Blessed">
+                            <div class="project-info">
+                                <h3>Proyecto Blessed</h3>
+                                <p>Aplicación web deportiva (Ligas, Jugadores, Noticias) desarrollada con
+                                    <strong>Next.js</strong> y <strong>DaisyUI</strong>. Incluye un diseño moderno con
+                                    carruseles personalizados.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Proyecto 2: Proyecto Escuela -->
+                    <article class="project-card">
+                        <a href="https://escuela2026-qghn.vercel.app/" target="_blank"
+                            style="text-decoration: none; color: inherit; display: block;">
+                            <img src="images/school_project.png" alt="Proyecto Escuela">
+                            <div class="project-info">
+                                <h3>Proyecto Escuela</h3>
+                                <p>Sistema de gestión escolar integral para el manejo de estudiantes, asignaturas y
+                                    grupos. Implementado con <strong>Next.js</strong> y <strong>Prisma</strong>.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="contact reveal-on-scroll">
+            <div class="container">
+                <form class="contact-form">
+                    <h2>¿Hablamos?</h2>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Clavero">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">Mensaje</label>
+                        <textarea id="msg" rows="5" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Carlos Clavero Sánchez</p>
+
+    <footer style="border-top: 1px solid var(--border); padding: 60px 0; text-align: center;">
+        <div class="container">
+            <p style="color: var(--text-muted);">&copy; 2026 Carlos Clavero Sánchez | Desarrollador Junior</p>
+        </div>
     </footer>
 </body>
 

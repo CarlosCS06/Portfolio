@@ -1,6 +1,6 @@
 # Portafolio Profesional - Trabajo Tema 4 DIW
 
-Este proyecto es un portafolio profesional desarrollado exclusivamente con **HTML5** y **CSS3**, sin el uso de Javascript. El objetivo es demostrar el dominio de técnicas avanzadas de diseño web, animaciones y diseño responsive.
+Este proyecto es un portafolio profesional temático sobre **Inteligencia Artificial** desarrollado exclusivamente con **HTML5** y **CSS3**, sin el uso de Javascript. El objetivo es demostrar el dominio de técnicas avanzadas de diseño web, animaciones y diseño responsive.
 
 ## Información del Estudiante
 * **Nombre:** Carlos
@@ -13,7 +13,7 @@ Este proyecto es un portafolio profesional desarrollado exclusivamente con **HTM
 ## Descripción de los Apartados
 
 ### 1. Inicio (Hero)
-Una sección de impacto con un título animado y un elemento decorativo en 3D (un cubo giratorio) creado íntegramente con transformaciones CSS.
+Una sección de impacto con un título de Inteligencia Artificial, un subtítulo descriptivo y un elemento decorativo en 3D (un **Núcleo Neural** de datos) creado íntegramente con transformaciones CSS.
 
 ### 2. Sobre Mí
 Presentación personal que incluye una imagen con transparencia y una breve biografía. Esta sección utiliza animaciones basadas en scroll para aparecer suavemente cuando el usuario navega.
